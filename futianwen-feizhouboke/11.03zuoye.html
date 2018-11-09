@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: floralwhite;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#header{
+			width: 100%;height: 152px;background: lightseagreen;
+			line-height: 130px;
+		}
+		h1{
+			text-align: center;
+		}
+		.div-guide{
+			width: 100%;height: 52px;background: grey;
+			position: absolute;top: 107px;left: 0;
+		}
+		.div-guide>div{
+			float: left;
+			
+			text-align: center;line-height: 52px;
+			margin-right: 1px;
+			font-size: 18px;
+			color: white;
+		}
+		.div-Home{
+			margin-left: 180px;
+			width: 75px;height: 52px;
+			background: lightseagreen;
+		}
+		.div-information{
+			width: 75px;height: 52px;
+		}
+		.div-Web{
+			width: 107px;height: 52px;
+		}
+		.div-Office{
+			width: 82px;height: 52px;
+		}
+		.div-computer{
+			width: 88px;height: 52px;
+		}
+		.div-resources{
+			width: 75px;height: 52px;
+		}
+		.div-other{
+			width: 75px;height: 52px;
+			background: lightseagreen;
+		}
+		.div-search{
+			width: 54px;height: 51px;float: right;
+			position: absolute;top: 107px;right: 180px;
+			background: url(img/hwhcproject/blogs/navSearch2.jpg)0px -2px;
+		}
+		.div-container{
+			width: 1395px;height: 2564px;
+			position: absolute;top: 159px;left: 180px;
+		}
+		.div-speeker{
+			height: 40px;
+		}
+		.div-toptip{
+			height: 25px;width: 1395px;
+			position: absolute;top: 7.5px;left: 0;
+		}
+		.div-left{
+			width: 120px;height: 297px;
+			float: left;
+		}
+		.div-mid{
+			width: 716px;height: 297px;
+			float: left;
+			overflow: hidden;
+		}
+		.div-in{
+			width: 2864px;height: 297px;
+			animation: move 10s linear infinite 1s;
+		}
+		.div-in>div{
+			width: 716px;height: 297px;float: left;
+		}
+		@keyframes move{
+				from{transform: translateX(0);}
+				to{transform: translateX(-2148px);}
+			}
+		.div-social{
+			width: 360px;height: 65px;
+			position: absolute;top: 40px;left: 1034px;
+			background: white;
+			margin-top: 5px;
+		}
+		.div-subscribe{
+			width: 360px;height: 143px;
+			position: absolute;top: 105px;left: 1034px;
+			background: white;
+		}
+		.div-object{
+			width: 360px;height: 143px;
+			position: absolute;top: 248px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		.div-object>div{
+			margin-left: 30px;
+			
+		}
+		.div-catalogue{
+			width: 300px;height: 30px;
+			margin-top: 10px;
+			background: white;
+		}
+		.div-content1{
+			width: 150px;height: 80px;
+		}
+		.div-content2{
+			width: 150px;height: 80px;
+			position: absolute;left: 180px;top: 40px;
+		}
+		.div-tipcloud{
+			width: 360px;height: 143px;
+			position: absolute;top: 391px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			}
+		.div-tipcloud>a{
+			text-decoration: none;
+			color: lightseagreen;
+		}
+		.div-tipcloud-title{
+			width: 300px;height: 30px;
+			margin-top: 10px;
+		}
+		.div-tipcloud-title{
+			width: 300px;height: 30px;
+			margin-top: 10px;
+		}
+		.div-title-tip>div{
+			width: 150px;height: 100px;
+			
+			margin-left: 30px;
+			font-size: 15px;
+		}
+		.div-tip-b{
+			position: absolute;left: 180px;top: 40px;
+		}
+		.div-nearby{
+			width: 360px;height: 143px;
+			position: absolute;top: 534px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		.div-nearby>a{
+			text-decoration: none;
+			color: lightseagreen;
+		}
+		.div-nearby>div{
+			margin-left: 20px;
+		}
+		.div-nearby-a{
+			width: 300px;height: 30px;
+			margin-top: 10px;
+		}
+		.div-nearby-b{
+			font-size: 13px;
+		}
+		.div-current{
+			width: 360px;height: 143px;
+			position: absolute;top: 677px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		a{
+			text-decoration: none;
+			color: lightseagreen;
+		}
+		.div-active{
+			width: 360px;height: 143px;
+			position: absolute;top: 820px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		.div-words{
+			width: 360px;height: 143px;
+			position: absolute;top: 963px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		.div-calendar{
+			width: 360px;height: 143px;
+			position: absolute;top: 1106px;left: 1034px;
+			background: white;
+			text-decoration: none;
+			color: lightseagreen;
+			}
+		article{
+			float: left;
+			width: 836px;height: 204px;
+		}
+		.div-resources1>div{
+			width: 120px;height: 30px;
+			background: lightseagreen;
+			text-align: center;color: white;line-height: 30px;
+		}
+		.div-resources1{
+			display: none;
+		}
+		.div-resources:hover .div-resources1{
+			background: grey;
+			display: block;
+		}
+		.div-other1>div{
+			width: 120px;height: 30px;
+			background: lightseagreen;
+			text-align: center;color: white;line-height: 30px;
+		}
+		.div-other1{
+			display: none;
+		}
+		.div-other:hover .div-other1{
+			background: grey;
+			display: block;
+		}
+		.div-guide>div:hover{
+			background: lightseagreen;
+		}
+		img{
+			margin-top: 3px;
+			border: 2px white solid;
+		}
+		.div-social>div{
+			float: left;
+			margin-top: 10px;margin-left: 18px;
+		}
+		.div-login{
+			float: right;
+			margin-right: 20px;
+		}
+		.div-subscribe>div{
+			width: 300px;
+			margin-left: 30px;
+			margin-top: 10px;
+		}
+		.div-email{
+			height: 40px;
+			border-bottom: 2px lightgray solid;
+		}
+		.div-email-input{
+			height: 60px;
+		}
+		/*文章1*/
+		.a-a-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-a-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-a-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章2*/	
+		.a-b-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-b-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-b-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章3*/
+		.a-c-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-c-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-c-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章4*/
+		.a-d-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-d-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-d-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章5*/
+		.a-e-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-e-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-e-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章6*/
+		.a-f-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-f-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-f-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章7*/
+		.a-g-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-g-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-g-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章8*/
+		.a-h-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-h-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-h-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章9*/
+		.a-i-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-i-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-i-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+		/*文章10*/
+		.a-j-2{
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.a-j-1{
+			margin-top: 10px;
+			margin-left: 20px;
+		}
+		.a-j-2-1{
+			width: 500px;
+			position: relative;left: 220px;top: -120px;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<!--<header id="header">
+		<div>
+			<h1>
+				<span>飞舟博客</span>
+				<span>-关注Web前段发展，分享办公软件使用心得。</span>
+			</h1>
+		</div>
+		<div class="div-guide">
+			<div class="div-Home">首页</div>
+			<div class="div-information">资讯</div>
+			<div class="div-Web">Web前端</div>
+			<div class="div-Office">Office</div>
+			<div class="div-computer">计算机</div>
+			<div class="div-resources">资源
+				<div class="div-resources1">
+					<div>网站模板</div>
+					<div>网页插图</div>
+					<div>图片图表</div>
+					<div>软件</div>
+					<div>其他</div>
+				</div>
+			</div>
+			<div class="div-other">其他
+				<div class="div-other1">
+					<div>文章投稿</div>
+					<div>标签云</div>
+					<div>投稿</div>
+					<div>留言板</div>
+					<div>友情链接</div>
+				</div>
+			</div>
+		</div>
+		<div class="div-search"><img src="../img/feizhou/navSearch.jpg" alt="" /></div>
+	</header>-->
+	<section class="div-container">
+		<div class="div-speeker">
+			<div class="div-toptip">
+				<img src="img/hwhcproject/blogs/broadcast.jpg"/>
+				<span>飞舟博客改版，新增web前端开发知识。</span>
+				<div class="div-login">
+					<img src="img/hwhcproject/blogs/login.jpg"/>
+					<span>登陆</span>
+				</div>
+			</div>
+		</div>
+		<div class="div-left">
+			<img src="img/hwhcproject/blog/banner/timthumb.jpg" alt="" />
+			<img src="img/hwhcproject/transion1/banner_two.png" alt="" />
+			<img src="img/hwhcproject/transion1/banner_three.png"/>
+			<img src="img/hwhcproject/transion1/banner_four.png"/>
+		</div>
+		<div class="div-mid">
+			<div class="div-in">
+				<div><img src="img/hwhcproject/transion1/transform_one .jpg"/></div>
+				<div><img src="img/hwhcproject/transion1/transform_three.jpg"/></div>
+				<div><img src="img/hwhcproject/transion1/transform_two.jpg"/></div>
+				<div><img src="img/hwhcproject/transion1/transform_four.jpg"/></div>
+			</div>
+		</div>
+		
+		<article class="a-a" style="background: white;">
+	
+			<header class="a-a-1">
+				<span style="background: darkred;font-size: 10px;color: white;">Web前端</span>
+				<span style="font-size: 20px;color: lightseagreen;">meta标签全解</span>
+			</header>
+			
+			<div class="a-a-2">
+				<img src="img/hwhcproject/blogs1/timthumb (3).jpg"/>
+				<div class="a-a-2-1">
+					<span>站点导航：http-equiv
+						name
+						其他
+							&lt;meta&gt;元素可提供相关页面的元信息(meta-information)，比如针对搜索引擎的页面描述和关键词。 标签位于文档的头部
+							&lt;head&gt;内，是html语言里的一个辅助性标签，里面的内容不会显示在...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-b" style="background: white;">
+	
+			<header class="a-b-1">
+				<span style="background: darkred;font-size: 10px;color: white;">office</span>
+				<span style="font-size: 20px;color: lightseagreen;">PowerPoint里面无法进行中文输入，原因为何？</span>
+			</header>
+			
+			<div class="a-b-2">
+				<img src="img/hwhcproject/blogs/timthumb (1).jpg"/>
+				<div class="a-b-2-1">
+					<span>微软的office系列软件很是好用，但是也伴随着很多的问题，
+						今天就来谈谈PPT中无法输入中文的情况。
+						 具体的症状应该是这样的： 在其它软件中（如记事本中）是可以打出中文字符的；
+						  唯独PPT中只能输入英文，一旦切换到中文输入法时就无法打出中文； 
+						  可是却可以通过复制粘贴的方式将中文粘...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-c" style="background: white;">
+	
+			<header class="a-c-1" style="background: white;">
+				<span style="background: darkred;font-size: 10px;color: white;">图片图标</span>
+				<span style="font-size: 20px;color: lightseagreen;">萌妹子必备：180+超可爱的PNG素材</span>
+			</header>
+			
+			<div class="a-c-2">
+				<img src="img/hwhcproject/blogs/timthumb (2).jpg"/>
+				<div class="a-c-2-1">
+					<span>超可爱，萌萌哒的PNG素材！ 重要！获取方法： 
+						关注微信号“飞sir学府”后回复关键字“解压密码”，即可获得压缩包解压密码。 
+						下载地址 转载请注明：飞舟博客 » 萌妹子必备：180+超可爱的PNG素材...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-d" style="background: white;">
+	
+			<header class="a-d-1">
+				<span  style="background: darkred;font-size: 10px;color: white;">office</span>
+				<span style="font-size: 20px;color: lightseagreen;">如何在PPT中设置移动鼠标出现标注文字？</span>
+			</header>
+			
+			<div class="a-d-2">
+				<img src="img/hwhcproject/blogs1/timthumb (2).jpg"/>
+				<div class="a-d-2-1">
+					<span>画面应该是这样的，当鼠标移动到一张图片或者文字上方时，
+						会在特定的位置出现文字，当鼠标移开时，文字会消失，这就是一个仿网页的效果。
+						但是在PPT中能否实现这样的效果勒？ 首先我们来理一下思路，当鼠标移动到图片上时，
+						跳转到第二张幻灯片，而这一张幻灯片与第一张一样，只是多了个文字，这样，...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-e" style="background: white;">
+	
+			<header class="a-e-1">
+				<span style="background: darkred;font-size: 10px;color: white;">计算机</span>
+				<span style="font-size: 20px;color: lightseagreen;">同名文件被替换覆盖后可以恢复吗？</span>
+			</header>
+			
+			<div class="a-e-2">
+				<img src="img/hwhcproject/blogs1/timthumb (4).jpg"/>
+				<div class="a-e-2-1">
+					<span>前两天一同事找我，说他辛辛苦苦写的计划被一个同名文件给覆盖了，
+						想死的心都有了，问我有没有办法恢复被覆盖的文件？ 也许很多朋友都有遇到过这种情况，
+						当时除了懊恼，烦躁，恨自己怎么那么手快，点击了确认覆盖。所以就只能再苦逼的重做。 
+						NO NO NO！ 其实事情还是可以有回转的余地的，为...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-f"  style="background: white;">
+	
+			<header class="a-f-1">
+				<span style="background: darkred;font-size: 10px;color: white;">office</span>
+				<span style="font-size: 20px;color: lightseagreen;">你是否经常遇到下载的PPT或者WORD打不开的情况？</span>
+			</header>
+			
+			<div class="a-f-2">
+				<img src="img/hwhcproject/blogs1/timthumb (5).jpg"/>
+				<div class="a-f-2-1">
+					<span>大家是否经常遇到在网上下载的PPT文档或者WORD文档无法打开的情况？
+						在打开时，总会弹出对话框显示：   Word在试图打开文件时遇到错误。 
+						请尝试下列方法： * 检查文档或驱动器的文件权限。 * 确保有足够的内存和磁盘空间。 * 用文件恢复转换器打开文件。 &nb...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-g" style="background: white;">
+	
+			<header class="a-g-1">
+				<span style="background: darkred;font-size: 10px;color: white;">其他</span>
+				<span style="font-size: 20px;color: lightseagreen;">500多张Win8Win10扁平化风格PPT模版</span>
+			</header>
+			
+			<div class="a-g-2">
+				<img src="img/hwhcproject/transion1/timthumb (9).jpg"/>
+				<div class="a-g-2-1">
+					<span>网上收集来的500多张Win8Win10扁平化风格PPT模版，喜欢的话给个赞额！ 下载地址见文末。
+						           下载地址 转载请注明：飞舟博客 » 500多张Win8Win10扁平化风格PPT模版...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-h" style="background: white;">
+	
+			<header class="a-h-1">
+				<span style="background: darkred;font-size: 10px;color: white;">office</span>
+				<span style="font-size: 20px;color: lightseagreen;">你所不知道的PPT中的快捷键！</span>
+			</header>
+			
+			<div class="a-h-2">
+				<img src="img/hwhcproject/blogs1/timthumb (7).jpg"/>
+				<div class="a-h-2-1">
+					<span>如果你以为这篇文章是来告诉你Ctrl+C和Ctrl+V这种全民都知道的技能那就大错特错了。
+						其实在PPT中还有很多不为人知的快捷键，可以快速提高使用效率，今天主要从两个方面来简要说说。 
+						制作中的快捷键 1、快速复制幻灯片或者图片文字 平时我们是怎么做的勒，是不是先复制一个，然后再粘...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-i" style="background: white;">
+	
+			<header class="a-i-1">
+				<span style="background: darkred;font-size: 10px;color: white;">图片图标</span>
+				<span style="font-size: 20px;color: lightseagreen;">设计师必备扁平化图标！</span>
+			</header>
+			
+			<div class="a-i-2">
+				<img src="img/hwhcproject/transion1/timthumb4.jpg"/>
+				<div class="a-i-2-1">
+					<span>上万个扁平化图示图标，都是我从外网上下载下来的，现在免费分享给大家，喜欢的记得给个赞额！
+						   重要！获取方法： 关注微信号“飞sir学府”后回复关键字“解压密码”，即可获得压缩包解压密码。
+						    下载地址 转载请注明：飞舟博客 » 设计师必备扁平...</span>
+				</div>
+			</div>
+		</article>
+		<article class="a-j" style="background: white;">
+	
+			<header class="a-j-1">
+				<span style="background: darkred;font-size: 10px;color: white;">office</span>
+				<span style="font-size: 20px;color: lightseagreen;">PPT中的艺术字竟然还可以这样玩</span>
+			</header>
+			
+			<div class="a-j-2">
+				<img src="img/hwhcproject/blogs1/timthumb (6).jpg"/>
+				<div class="a-j-2-1">
+					<span>作为微软三大办公软件之一的PowerPoint，深受广大百姓的爱戴，
+						也成为了办公室一族必备的技能。随着近几代版本的更替，功能也更加的强大。
+						纵观中外优秀的PPT作品，我们不难发现里面的配图都很美，整个PPT很和谐。那是因为大部分的配图都是自己做的，
+						而不是在网上胡乱的复制贴粘几张过...</span>
+				</div>
+			</div>
+		</article>
+		<div class="div-social">
+			<div><img src="img/hwhcproject/blogs1/weibo.jpg"/></div>
+			<div><img src="img/hwhcproject/blogs1/QQweibo.jpg"/></div>
+			<div><img src="img/hwhcproject/blogs1/weixin.jpg"/></div>
+			<div><img src="img/hwhcproject/blogs1/youxiang.jpg"/></div>
+			<div><img src="img/hwhcproject/blogs1/QQ.jpg"/></div>
+			<div><img src="img/hwhcproject/blogs1/shoucang.jpg"/></div>
+		</div>
+		<div class="div-subscribe">
+			<div class="div-email">邮箱订阅</div>
+			<div class="div-email-input">填写您的邮件地址，订阅更多的精彩内容：
+				<input type="" name="" id="" value="" placeholder="your@email.com"/><span>订阅</span>
+				
+			</div>
+		</div>
+		<div class="div-object">
+			<div class="div-catalogue">分类目录</div>
+			<div class="div-content1">
+				<dl>
+					<dd>office</dd>
+					<dd>其他</dd>
+					<dd>计算机</dd>
+				</dl>
+			</div>
+			<div class="div-content2">
+				<dl>
+					<dd>Web前端</dd>
+					<dd>图标图片</dd>
+					<dd>软件</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="div-tipcloud">
+			<div class="div-tipcloud-title">标签云</div>
+			<div class="div-title-tip">
+				<div class="div-tip-a">
+					<dl>
+						<dd><a href="" title="25个话题">office</a></dd>
+						<dd><a href="" title="17个话题">计算机</a></dd>
+						<dd><a href="" title="9个话题">网络安全</a></dd>
+						<dd><a href="" title="6个话题">图片资源</a></dd>
+						<dd><a href="" title="4个话题">互联网</a></dd>
+					</dl>
+				</div>
+				<div class="div-tip-b">
+					<dl>
+						<dd><a href="" title="20个话题">ppt</a></dd>
+						<dd><a href="" title="10个话题">资源搜索</a></dd>
+						<dd><a href="" title="6个话题">Excel</a></dd>
+						<dd><a href="" title="5个话题">word</a></dd>
+						<dd><a href="" title="3个话题">网络</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="div-nearby">
+			<div class="div-nearby-a">近期文章</div>
+			<div class="div-nearby-b">
+				<dl>
+					<dd><a href="">meta标签全解</a></dd>
+					<dd><a href="">PowerPoint里面无法进行中文输入，原因为何？</a></dd>
+					<dd><a href="">萌妹子必备：180+超可爱的PNG素材</a></dd>
+					<dd><a href="">如何在PPT中设置移动鼠标出现标注文字？</a></dd>
+					<dd><a href="">同名文件被替换覆盖后可以恢复吗？</a></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="div-current">
+			<div class="div-current-a">时事热门</div>
+			<dl>
+				<dd><a href="">简单四步即可处理好PP背景音乐和视频的冲突</a></dd>
+				<dd><a href="">如何高速有效的利用搜索引擎寻找需要的资源</a></dd>
+				<dd><a href="">Internet download manager （IDM）下载器</a></dd>
+				<dd><a href="">网页音视频下载方法之--IDM等下载器</a></dd>
+				<dd><a href="">网页音视频下载方法之--开发人员工具</a></dd>
+			</dl>
+		</div>
+		<div class="div-active">
+			<div>活跃读者</div>
+			<div>
+				<img src="img/hwhcproject/transition/username.png"/>
+				<span>飞舟3年前(2015-11-17)说：谢谢额</span>
+			</div>
+		</div>
+		<div class="div-words"></div>
+		<div class="div-calendar"></div>
+	</section>
+	</head>
+<body>
+	<header id="header">
+		<div style="text-align: center;">
+			
+				<span style="font-size: 50px;color: white;">飞舟博客</span>
+				<span style="font-size: 20px;color: white;">-关注Web前段发展，分享办公软件使用心得。</span>
+			
+		</div>
+		<div class="div-guide">
+			<div class="div-Home">首页</div>
+			<div class="div-information">资讯</div>
+			<div class="div-Web">Web前端</div>
+			<div class="div-Office">Office</div>
+			<div class="div-computer">计算机</div>
+			<div class="div-resources">资源
+				<div class="div-resources1">
+					<div>网站模板</div>
+					<div>网页插图</div>
+					<div>图片图表</div>
+					<div>软件</div>
+					<div>其他</div>
+				</div>
+			</div>
+			<div class="div-other">其他
+				<div class="div-other1">
+					<div>文章投稿</div>
+					<div>标签云</div>
+					<div>投稿</div>
+					<div>留言板</div>
+					<div>友情链接</div>
+				</div>
+			</div>
+		</div>
+		<div class="div-search"></div>
+	</header>
+	<footer></footer>
+</body>
+</html>
